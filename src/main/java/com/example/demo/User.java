@@ -15,25 +15,18 @@ public class User {
     private long id;
 
     @Column(name = "username")
-    @Size(min = 3)
     private String username;
 
     @Column
-    @NotEmpty
-    @NotNull
     private String email;
 
     @Column(name = "password")
     private String password;
 
     @Column(name = "first_name")
-    @NotEmpty
-    @NotNull
     private String firstName;
 
     @Column(name = "last_name")
-    @NotEmpty
-    @NotNull
     private String lastName;
 
     @Column(name = "enabled")
@@ -43,11 +36,11 @@ public class User {
 
     }
 
-    public User(@Size(min = 3) String username,
-                @NotEmpty @NotNull String email,
-                @NotEmpty @NotNull String password,
-                @NotEmpty @NotNull String firstName,
-                @NotEmpty @NotNull String lastName,
+    public User(String username,
+                String email,
+                String password,
+                String firstName,
+                String lastName,
                 boolean enabled){
         this.username = username;
         this.email = email;
